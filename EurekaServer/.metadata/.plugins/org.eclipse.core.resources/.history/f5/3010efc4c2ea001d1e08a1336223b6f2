@@ -1,0 +1,23 @@
+spring.application.name = eureka
+server.port = 8761
+#ne pas enregistrer les microservices qui ne sont pas métier
+eureka.client.register-with-eureka=false
+management.endpoints.web.exposure.include=*
+#ne pas garder les microservices qui sont arréter
+#eureka.client.fetch-registry=false
+
+
+#spring.application.name=API-GATEWAY
+#server.port=9191
+#management.endpoints.web.exposure.include=*
+
+#Do not register yourself
+eureka.client.fetch-registry=true
+#Do not register on another server
+
+#The service URL for any client that doesn?t express a preference
+eureka.client.service-url.default-zone = http://localhost:${server.port}/eureka
+#The domain we manage
+eureka.instance.hostname=localhost
+#Refresh rate < 1s
+eureka.server.renewal-percent-threshold=0.85
