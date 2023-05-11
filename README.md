@@ -56,3 +56,18 @@ mvn spring-boot:run
 cd avis-des-clients
 npm install
 node server.js
+
+# Description du pattern
+
+![image](https://github.com/sendanemissi/VoyageAffaire/assets/86804472/f2c9acc3-a347-4b2e-baac-86cbb60d6f81)
+
+Spring Cloud Config gère les données de configuration des applications via un service centralisé, de sorte que les données de configuration de nos environnements soient clairement séparées de notre microservice déployé. Cela garantit que, peu importe le nombre d'instances de microservices que nous avons lancées, elles auront toujours la même configuration. 
+
+# Configuration de Spring Cloud Config
+
+```shell
+<dependency>
+<groupId>org.springframework.cloud</groupId>
+<artifactId>spring-cloud-config-server</artifactId>
+</dependency>
+
