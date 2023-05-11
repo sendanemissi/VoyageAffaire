@@ -71,7 +71,7 @@ Spring Cloud Config gère les données de configuration des applications via un 
 <artifactId>spring-cloud-config-server</artifactId>
 </dependency>
 
-```shell
+```xml
 #eureka registration
 spring.application.name=config-server
 server.port=8889
@@ -84,7 +84,7 @@ spring.profiles.active=native
 spring.cloud.config.server.native.searchLocations=./src/main/resources/centralRepo
 
 
-```shell
+```java
 @SpringBootApplication
 @EnableConfigServer
 public class ConfigserverApplication {
